@@ -38,7 +38,7 @@ app.get('/api/transactions',async (req,res)=>{
 
 //global catch
 app.use((err,req,res,next)=>{
-    if(err) console.log("Error Failed to load",err);
+    if(err) res.send(err);
     next();
 })
 
